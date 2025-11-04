@@ -15,4 +15,16 @@ public class CustomerMapper {
                 .city(request.city())
                 .build();
     }
+
+    public CustomerResponse toCustomerResponse(Customer customer) {
+        return CustomerResponse.builder()
+                .id(customer.getId())
+                .firstName(customer.getFirstName())
+                .lastName(customer.getLastName())
+                .email(customer.getEmail())
+                .phone(customer.getPhone())
+                .address(customer.getAddress())
+                .city(customer.getCity())
+                .build();
+    }
 }
