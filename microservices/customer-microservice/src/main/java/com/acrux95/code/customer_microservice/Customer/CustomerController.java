@@ -1,0 +1,36 @@
+package com.acrux95.code.customer_microservice.Customer;
+
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("api/v1/customers")
+@RequiredArgsConstructor
+
+public class CustomerController {
+    private final CustomerService service;
+
+    @PostMapping
+    public ResponseEntity<String> createCustomer(@RequestBody @Valid CustomerRequest request) {
+        return ResponseEntity.ok(service.createCustomer(request));
+    }
+
+    @GetMapping("/{customerId}")
+    public ResponseEntity<CustomerResponse> getCustomerById(@PathVariable ("customerId") String customerId) {
+        return ResponseEntity.ok(service.getCustomerById(customerId));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<CustomerResponse>> getCustomers() {
+        return ResponseEntity.ok((service.getCustomers()));
+    }
+
+    @PutMapping
+    public ResponseEntity<String> updateCustomer(@RequestBody @Valid CustomerRequest request) {
+        
+    }
+}
