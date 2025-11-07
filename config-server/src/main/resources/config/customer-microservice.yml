@@ -7,5 +7,19 @@ spring:
       #username: root
       #password: pass
       #authentication-database: admin
-server:
-  port: 8091
+  server:
+    port: 8091
+
+logging:
+  level:
+    root: INFO
+    com.acrux95.code.customer_microservice: WARN
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  file:
+    name: C:\Users\2638605\Desktop\projs\springboot\ecommerce\microservices\customer-microservice\logs\customer-microservice.log
+    max-size: 10MB
+    max-history: 30
+
+

@@ -2,11 +2,17 @@ package com.acrux95.code.customer_microservice.Customer;
 
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class CustomerMapper {
     public Customer toCustomer(CustomerRequest request) {
         return Customer.builder()
-                .id(request.id())
+                .id(
+                        (request.id() == null || request.id().isBlank()
+                                ? UUID.randomUUID().toString()
+                                : request.id())
+                )
                 .firstName(request.firstName())
                 .lastName(request.lastName())
                 .email(request.email())

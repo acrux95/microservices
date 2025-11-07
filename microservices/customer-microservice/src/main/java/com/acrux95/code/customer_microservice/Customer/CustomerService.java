@@ -1,5 +1,6 @@
 package com.acrux95.code.customer_microservice.Customer;
 
+import com.acrux95.code.customer_microservice.exceptions.CustomerNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +20,13 @@ public class CustomerService {
     }
 
     public CustomerResponse getCustomerById(String customerId) {
-        return repository.findById(customerId)
+        return repository
+                .findById(customerId)
                 .map(mapper::toCustomerResponse)
-                .orElseThrow();
+                .orElseThrow(() -> new CustomerNotFoundException(
+                        String.format("Customer with id %s not found", customerId)
+                        )
+                );
     }
 
     public List<CustomerResponse> getCustomers() {
@@ -33,7 +38,9 @@ public class CustomerService {
     public void deleteCustomerById(String customerId) {
         repository
                 .findById(customerId)
-                .orElseThrow();
+                .orElseThrow(() -> new CustomerNotFoundException(
+                        String.format("Customer with id %s not found", customerId)
+                ));
         repository.deleteById(customerId);
     }
 }
