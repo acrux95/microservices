@@ -1,0 +1,931 @@
+2025-11-07 13:14:22 - Starting CustomerMicroserviceApplication using Java 25.0.1 with PID 27816 (C:\Users\2638605\Desktop\projs\springboot\ecommerce\microservices\customer-microservice\target\classes started by 2638605 in C:\Users\2638605\Desktop\projs\springboot\ecommerce)
+2025-11-07 13:14:22 - No active profile set, falling back to 1 default profile: "default"
+2025-11-07 13:14:22 - Fetching config from server at : http://localhost:8888
+2025-11-07 13:14:22 - Located environment: name=customer-microservice, profiles=[default], label=null, version=null, state=null
+2025-11-07 13:14:23 - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-11-07 13:14:23 - Finished Spring Data repository scanning in 149 ms. Found 1 MongoDB repository interface.
+2025-11-07 13:14:23 - BeanFactory id=ca15e5f9-8da9-3825-8fac-e7235961fae4
+2025-11-07 13:14:24 - Tomcat initialized with port 8080 (http)
+2025-11-07 13:14:24 - Starting service [Tomcat]
+2025-11-07 13:14:24 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-07 13:14:24 - Initializing Spring embedded WebApplicationContext
+2025-11-07 13:14:24 - Root WebApplicationContext: initialization completed in 2270 ms
+2025-11-07 13:14:25 - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.1+8-LTS-27"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='customer', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@74707df8, com.mongodb.Jep395RecordCodecProvider@12c76d6e, com.mongodb.KotlinCodecProvider@46702c26]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.gstcffm.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-6swb58-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-11-07 13:14:25 - Adding discovered server ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:14:25 - Adding discovered server ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:14:25 - Adding discovered server ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:14:25 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=444167600, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a48069c893d85d73b6645, counter=3}, lastWriteDate=Fri Nov 07 13:14:24 CST 2025, lastUpdateTimeNanos=595896610899100}
+2025-11-07 13:14:25 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=447426300, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000022b, setVersion=255, topologyVersion=TopologyVersion{processId=690a45906712b525b3c02b85, counter=6}, lastWriteDate=Fri Nov 07 13:14:24 CST 2025, lastUpdateTimeNanos=595896611300900}
+2025-11-07 13:14:25 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=444231900, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a4275db1b4aa5abf25449, counter=4}, lastWriteDate=Fri Nov 07 13:14:24 CST 2025, lastUpdateTimeNanos=595896610900900}
+2025-11-07 13:14:25 - Discovered replica set primary ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 with max election id 7fffffff000000000000022b and max set version 255
+2025-11-07 13:14:26 - Eureka HTTP Client uses RestTemplate.
+2025-11-07 13:14:26 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-07 13:14:26 - Setting initial instance status as: STARTING
+2025-11-07 13:14:26 - Initializing Eureka in region us-east-1
+2025-11-07 13:14:26 - Resolving eureka endpoints via configuration
+2025-11-07 13:14:26 - Disable delta property : false
+2025-11-07 13:14:26 - Single vip registry refresh property : null
+2025-11-07 13:14:26 - Force full registry fetch : false
+2025-11-07 13:14:26 - Application is null : false
+2025-11-07 13:14:26 - Registered Applications size is zero : true
+2025-11-07 13:14:26 - Application version is -1: true
+2025-11-07 13:14:26 - Getting all instance registry info from the eureka server
+2025-11-07 13:14:27 - The response status is 200
+2025-11-07 13:14:27 - Starting heartbeat executor: renew interval is: 30
+2025-11-07 13:14:27 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-07 13:14:27 - Discovery Client initialized at timestamp 1762542867258 with initial instances count: 0
+2025-11-07 13:14:27 - Registering application CUSTOMER-MICROSERVICE with eureka with status UP
+2025-11-07 13:14:27 - Saw local status change event StatusChangeEvent [timestamp=1762542867263, current=UP, previous=STARTING]
+2025-11-07 13:14:27 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:14:27 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-07 13:14:27 - Updating port to 8080
+2025-11-07 13:14:27 - Started CustomerMicroserviceApplication in 6.394 seconds (process running for 7.526)
+2025-11-07 13:14:27 - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-07 13:14:27 - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-07 13:14:27 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:14:57 - Disable delta property : false
+2025-11-07 13:14:57 - Single vip registry refresh property : null
+2025-11-07 13:14:57 - Force full registry fetch : false
+2025-11-07 13:14:57 - Application is null : false
+2025-11-07 13:14:57 - Registered Applications size is zero : true
+2025-11-07 13:14:57 - Application version is -1: false
+2025-11-07 13:14:57 - Getting all instance registry info from the eureka server
+2025-11-07 13:14:57 - The response status is 200
+2025-11-07 13:16:27 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-11-07 13:16:27 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 19 more
+
+2025-11-07 13:16:27 - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:16:27 - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:16:27 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 20 more
+
+2025-11-07 13:16:27 - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:16:27 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-11-07 13:16:27 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 23 more
+
+2025-11-07 13:16:27 - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:16:27 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2025-11-07 13:16:39 - Unregistering application CUSTOMER-MICROSERVICE with eureka with status DOWN
+2025-11-07 13:16:39 - Saw local status change event StatusChangeEvent [timestamp=1762542999831, current=DOWN, previous=UP]
+2025-11-07 13:16:39 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:16:39 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-07 13:16:39 - Graceful shutdown complete
+2025-11-07 13:16:39 - Shutting down DiscoveryClient ...
+2025-11-07 13:16:39 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:16:39 - Unregistering ...
+2025-11-07 13:16:39 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - deregister  status: 200
+2025-11-07 13:16:39 - Completed shut down of DiscoveryClient
+2025-11-07 13:16:43 - Starting CustomerMicroserviceApplication using Java 25.0.1 with PID 10232 (C:\Users\2638605\Desktop\projs\springboot\ecommerce\microservices\customer-microservice\target\classes started by 2638605 in C:\Users\2638605\Desktop\projs\springboot\ecommerce)
+2025-11-07 13:16:43 - No active profile set, falling back to 1 default profile: "default"
+2025-11-07 13:16:43 - Fetching config from server at : http://localhost:8888
+2025-11-07 13:16:43 - Located environment: name=customer-microservice, profiles=[default], label=null, version=null, state=null
+2025-11-07 13:16:44 - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-11-07 13:16:44 - Finished Spring Data repository scanning in 109 ms. Found 1 MongoDB repository interface.
+2025-11-07 13:16:44 - BeanFactory id=ca15e5f9-8da9-3825-8fac-e7235961fae4
+2025-11-07 13:16:45 - Tomcat initialized with port 8080 (http)
+2025-11-07 13:16:45 - Starting service [Tomcat]
+2025-11-07 13:16:45 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-07 13:16:45 - Initializing Spring embedded WebApplicationContext
+2025-11-07 13:16:45 - Root WebApplicationContext: initialization completed in 1782 ms
+2025-11-07 13:16:45 - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.1+8-LTS-27"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='customer', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@699d96bc, com.mongodb.Jep395RecordCodecProvider@b5de9ac, com.mongodb.KotlinCodecProvider@4ecd8ab1]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.gstcffm.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-6swb58-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-11-07 13:16:45 - Adding discovered server ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:16:45 - Adding discovered server ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:16:45 - Adding discovered server ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:16:46 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=515419400, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a48069c893d85d73b6645, counter=3}, lastWriteDate=Fri Nov 07 13:16:47 CST 2025, lastUpdateTimeNanos=596037304736900}
+2025-11-07 13:16:46 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=522625400, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a4275db1b4aa5abf25449, counter=4}, lastWriteDate=Fri Nov 07 13:16:47 CST 2025, lastUpdateTimeNanos=596037304736900}
+2025-11-07 13:16:46 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=522625000, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000022b, setVersion=255, topologyVersion=TopologyVersion{processId=690a45906712b525b3c02b85, counter=6}, lastWriteDate=Fri Nov 07 13:16:47 CST 2025, lastUpdateTimeNanos=596037304736900}
+2025-11-07 13:16:46 - Discovered replica set primary ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 with max election id 7fffffff000000000000022b and max set version 255
+2025-11-07 13:16:47 - Eureka HTTP Client uses RestTemplate.
+2025-11-07 13:16:47 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-07 13:16:47 - Setting initial instance status as: STARTING
+2025-11-07 13:16:47 - Initializing Eureka in region us-east-1
+2025-11-07 13:16:47 - Resolving eureka endpoints via configuration
+2025-11-07 13:16:47 - Disable delta property : false
+2025-11-07 13:16:47 - Single vip registry refresh property : null
+2025-11-07 13:16:47 - Force full registry fetch : false
+2025-11-07 13:16:47 - Application is null : false
+2025-11-07 13:16:47 - Registered Applications size is zero : true
+2025-11-07 13:16:47 - Application version is -1: true
+2025-11-07 13:16:47 - Getting all instance registry info from the eureka server
+2025-11-07 13:16:48 - The response status is 200
+2025-11-07 13:16:48 - Starting heartbeat executor: renew interval is: 30
+2025-11-07 13:16:48 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-07 13:16:48 - Discovery Client initialized at timestamp 1762543008027 with initial instances count: 0
+2025-11-07 13:16:48 - Registering application CUSTOMER-MICROSERVICE with eureka with status UP
+2025-11-07 13:16:48 - Saw local status change event StatusChangeEvent [timestamp=1762543008033, current=UP, previous=STARTING]
+2025-11-07 13:16:48 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:16:48 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-07 13:16:48 - Updating port to 8080
+2025-11-07 13:16:48 - Started CustomerMicroserviceApplication in 5.869 seconds (process running for 6.86)
+2025-11-07 13:16:48 - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-07 13:16:48 - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-07 13:16:48 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:17:18 - Disable delta property : false
+2025-11-07 13:17:18 - Single vip registry refresh property : null
+2025-11-07 13:17:18 - Force full registry fetch : false
+2025-11-07 13:17:18 - Application is null : false
+2025-11-07 13:17:18 - Registered Applications size is zero : true
+2025-11-07 13:17:18 - Application version is -1: false
+2025-11-07 13:17:18 - Getting all instance registry info from the eureka server
+2025-11-07 13:17:18 - The response status is 200
+2025-11-07 13:18:14 - Unregistering application CUSTOMER-MICROSERVICE with eureka with status DOWN
+2025-11-07 13:18:14 - Saw local status change event StatusChangeEvent [timestamp=1762543094395, current=DOWN, previous=UP]
+2025-11-07 13:18:14 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:18:14 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-07 13:18:14 - Graceful shutdown complete
+2025-11-07 13:18:14 - Shutting down DiscoveryClient ...
+2025-11-07 13:18:14 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:18:14 - Unregistering ...
+2025-11-07 13:18:14 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - deregister  status: 200
+2025-11-07 13:18:14 - Completed shut down of DiscoveryClient
+2025-11-07 13:18:17 - Starting CustomerMicroserviceApplication using Java 25.0.1 with PID 5052 (C:\Users\2638605\Desktop\projs\springboot\ecommerce\microservices\customer-microservice\target\classes started by 2638605 in C:\Users\2638605\Desktop\projs\springboot\ecommerce)
+2025-11-07 13:18:17 - No active profile set, falling back to 1 default profile: "default"
+2025-11-07 13:18:17 - Fetching config from server at : http://localhost:8888
+2025-11-07 13:18:17 - Located environment: name=customer-microservice, profiles=[default], label=null, version=null, state=null
+2025-11-07 13:18:18 - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-11-07 13:18:18 - Finished Spring Data repository scanning in 103 ms. Found 1 MongoDB repository interface.
+2025-11-07 13:18:18 - BeanFactory id=ca15e5f9-8da9-3825-8fac-e7235961fae4
+2025-11-07 13:18:19 - Tomcat initialized with port 8080 (http)
+2025-11-07 13:18:19 - Starting service [Tomcat]
+2025-11-07 13:18:19 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-07 13:18:19 - Initializing Spring embedded WebApplicationContext
+2025-11-07 13:18:19 - Root WebApplicationContext: initialization completed in 1736 ms
+2025-11-07 13:18:19 - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.1+8-LTS-27"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='customer', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@d3cce46, com.mongodb.Jep395RecordCodecProvider@30eedaa4, com.mongodb.KotlinCodecProvider@52b30054]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.gstcffm.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-6swb58-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-11-07 13:18:19 - Adding discovered server ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:18:19 - Adding discovered server ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:18:19 - Adding discovered server ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:18:20 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=408066200, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a4275db1b4aa5abf25449, counter=4}, lastWriteDate=Fri Nov 07 13:18:21 CST 2025, lastUpdateTimeNanos=596131307906800}
+2025-11-07 13:18:20 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=410402200, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a48069c893d85d73b6645, counter=3}, lastWriteDate=Fri Nov 07 13:18:21 CST 2025, lastUpdateTimeNanos=596131307906800}
+2025-11-07 13:18:20 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=408242500, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000022b, setVersion=255, topologyVersion=TopologyVersion{processId=690a45906712b525b3c02b85, counter=6}, lastWriteDate=Fri Nov 07 13:18:21 CST 2025, lastUpdateTimeNanos=596131307906800}
+2025-11-07 13:18:20 - Discovered replica set primary ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 with max election id 7fffffff000000000000022b and max set version 255
+2025-11-07 13:18:21 - Eureka HTTP Client uses RestTemplate.
+2025-11-07 13:18:21 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-07 13:18:21 - Setting initial instance status as: STARTING
+2025-11-07 13:18:21 - Initializing Eureka in region us-east-1
+2025-11-07 13:18:21 - Resolving eureka endpoints via configuration
+2025-11-07 13:18:21 - Disable delta property : false
+2025-11-07 13:18:21 - Single vip registry refresh property : null
+2025-11-07 13:18:21 - Force full registry fetch : false
+2025-11-07 13:18:21 - Application is null : false
+2025-11-07 13:18:21 - Registered Applications size is zero : true
+2025-11-07 13:18:21 - Application version is -1: true
+2025-11-07 13:18:21 - Getting all instance registry info from the eureka server
+2025-11-07 13:18:21 - The response status is 200
+2025-11-07 13:18:21 - Starting heartbeat executor: renew interval is: 30
+2025-11-07 13:18:21 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-07 13:18:21 - Discovery Client initialized at timestamp 1762543101750 with initial instances count: 0
+2025-11-07 13:18:21 - Registering application CUSTOMER-MICROSERVICE with eureka with status UP
+2025-11-07 13:18:21 - Saw local status change event StatusChangeEvent [timestamp=1762543101756, current=UP, previous=STARTING]
+2025-11-07 13:18:21 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:18:21 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-07 13:18:21 - Updating port to 8080
+2025-11-07 13:18:21 - Started CustomerMicroserviceApplication in 5.285 seconds (process running for 6.3)
+2025-11-07 13:18:21 - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-07 13:18:21 - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-07 13:18:21 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:18:51 - Disable delta property : false
+2025-11-07 13:18:51 - Single vip registry refresh property : null
+2025-11-07 13:18:51 - Force full registry fetch : false
+2025-11-07 13:18:51 - Application is null : false
+2025-11-07 13:18:51 - Registered Applications size is zero : true
+2025-11-07 13:18:51 - Application version is -1: false
+2025-11-07 13:18:51 - Getting all instance registry info from the eureka server
+2025-11-07 13:18:51 - The response status is 200
+2025-11-07 13:19:51 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - Re-registering apps/CUSTOMER-MICROSERVICE
+2025-11-07 13:19:51 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:19:52 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:19:56 - Unregistering application CUSTOMER-MICROSERVICE with eureka with status DOWN
+2025-11-07 13:19:56 - Saw local status change event StatusChangeEvent [timestamp=1762543196856, current=DOWN, previous=UP]
+2025-11-07 13:19:56 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:19:56 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-07 13:19:56 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:19:56 - Graceful shutdown complete
+2025-11-07 13:19:56 - Shutting down DiscoveryClient ...
+2025-11-07 13:19:59 - Unregistering ...
+2025-11-07 13:19:59 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - deregister  status: 200
+2025-11-07 13:19:59 - Completed shut down of DiscoveryClient
+2025-11-07 13:20:03 - Fetching config from server at : http://localhost:8888
+2025-11-07 13:20:03 - Located environment: name=customer-microservice, profiles=[default], label=null, version=null, state=null
+2025-11-07 13:20:03 - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-11-07 13:20:04 - Finished Spring Data repository scanning in 127 ms. Found 1 MongoDB repository interface.
+2025-11-07 13:20:04 - BeanFactory id=ca15e5f9-8da9-3825-8fac-e7235961fae4
+2025-11-07 13:20:04 - Tomcat initialized with port 8080 (http)
+2025-11-07 13:20:04 - Starting service [Tomcat]
+2025-11-07 13:20:04 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-07 13:20:04 - Initializing Spring embedded WebApplicationContext
+2025-11-07 13:20:04 - Root WebApplicationContext: initialization completed in 1790 ms
+2025-11-07 13:20:05 - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.1+8-LTS-27"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='customer', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@56d822dc, com.mongodb.Jep395RecordCodecProvider@2ab8589a, com.mongodb.KotlinCodecProvider@21b744ec]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.gstcffm.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-6swb58-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-11-07 13:20:05 - Adding discovered server ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:20:05 - Adding discovered server ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:20:05 - Adding discovered server ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:20:06 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=420843800, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a4275db1b4aa5abf25449, counter=4}, lastWriteDate=Fri Nov 07 13:20:07 CST 2025, lastUpdateTimeNanos=596236879841400}
+2025-11-07 13:20:06 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=392792300, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a48069c893d85d73b6645, counter=3}, lastWriteDate=Fri Nov 07 13:20:07 CST 2025, lastUpdateTimeNanos=596236879842600}
+2025-11-07 13:20:06 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=412000500, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000022b, setVersion=255, topologyVersion=TopologyVersion{processId=690a45906712b525b3c02b85, counter=6}, lastWriteDate=Fri Nov 07 13:20:07 CST 2025, lastUpdateTimeNanos=596236880057000}
+2025-11-07 13:20:06 - Discovered replica set primary ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 with max election id 7fffffff000000000000022b and max set version 255
+2025-11-07 13:20:06 - Eureka HTTP Client uses RestTemplate.
+2025-11-07 13:20:06 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-07 13:20:06 - Setting initial instance status as: STARTING
+2025-11-07 13:20:06 - Initializing Eureka in region us-east-1
+2025-11-07 13:20:06 - Resolving eureka endpoints via configuration
+2025-11-07 13:20:06 - Disable delta property : false
+2025-11-07 13:20:06 - Single vip registry refresh property : null
+2025-11-07 13:20:06 - Force full registry fetch : false
+2025-11-07 13:20:06 - Application is null : false
+2025-11-07 13:20:06 - Registered Applications size is zero : true
+2025-11-07 13:20:06 - Application version is -1: true
+2025-11-07 13:20:06 - Getting all instance registry info from the eureka server
+2025-11-07 13:20:06 - The response status is 200
+2025-11-07 13:20:06 - Starting heartbeat executor: renew interval is: 30
+2025-11-07 13:20:06 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-07 13:20:06 - Discovery Client initialized at timestamp 1762543206958 with initial instances count: 0
+2025-11-07 13:20:06 - Registering application CUSTOMER-MICROSERVICE with eureka with status UP
+2025-11-07 13:20:06 - Saw local status change event StatusChangeEvent [timestamp=1762543206962, current=UP, previous=STARTING]
+2025-11-07 13:20:06 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:20:06 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-07 13:20:06 - Updating port to 8080
+2025-11-07 13:20:07 - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-07 13:20:07 - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-07 13:20:07 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:20:36 - Disable delta property : false
+2025-11-07 13:20:36 - Single vip registry refresh property : null
+2025-11-07 13:20:36 - Force full registry fetch : false
+2025-11-07 13:20:36 - Application is null : false
+2025-11-07 13:20:36 - Registered Applications size is zero : true
+2025-11-07 13:20:36 - Application version is -1: false
+2025-11-07 13:20:36 - Getting all instance registry info from the eureka server
+2025-11-07 13:20:36 - The response status is 200
+2025-11-07 13:22:37 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - Re-registering apps/CUSTOMER-MICROSERVICE
+2025-11-07 13:22:37 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:22:37 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:22:46 - Unregistering application CUSTOMER-MICROSERVICE with eureka with status DOWN
+2025-11-07 13:22:46 - Saw local status change event StatusChangeEvent [timestamp=1762543366147, current=DOWN, previous=UP]
+2025-11-07 13:22:46 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:22:46 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-07 13:22:46 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:22:46 - Graceful shutdown complete
+2025-11-07 13:22:46 - Shutting down DiscoveryClient ...
+2025-11-07 13:22:49 - Unregistering ...
+2025-11-07 13:22:49 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - deregister  status: 200
+2025-11-07 13:22:49 - Completed shut down of DiscoveryClient
+2025-11-07 13:22:52 - Fetching config from server at : http://localhost:8888
+2025-11-07 13:22:52 - Located environment: name=customer-microservice, profiles=[default], label=null, version=null, state=null
+2025-11-07 13:22:53 - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-11-07 13:22:53 - Finished Spring Data repository scanning in 105 ms. Found 1 MongoDB repository interface.
+2025-11-07 13:22:53 - BeanFactory id=ca15e5f9-8da9-3825-8fac-e7235961fae4
+2025-11-07 13:22:53 - Tomcat initialized with port 8080 (http)
+2025-11-07 13:22:53 - Starting service [Tomcat]
+2025-11-07 13:22:53 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-07 13:22:54 - Initializing Spring embedded WebApplicationContext
+2025-11-07 13:22:54 - Root WebApplicationContext: initialization completed in 1722 ms
+2025-11-07 13:22:54 - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.1+8-LTS-27"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='customer', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@15f2a43f, com.mongodb.Jep395RecordCodecProvider@4c65d8e3, com.mongodb.KotlinCodecProvider@382faf51]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.gstcffm.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-6swb58-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-11-07 13:22:54 - Adding discovered server ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:22:54 - Adding discovered server ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:22:54 - Adding discovered server ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:22:55 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=414262200, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a48069c893d85d73b6645, counter=3}, lastWriteDate=Fri Nov 07 13:22:55 CST 2025, lastUpdateTimeNanos=596406149098700}
+2025-11-07 13:22:55 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=444982000, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000022b, setVersion=255, topologyVersion=TopologyVersion{processId=690a45906712b525b3c02b85, counter=6}, lastWriteDate=Fri Nov 07 13:22:55 CST 2025, lastUpdateTimeNanos=596406148240000}
+2025-11-07 13:22:55 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=439316600, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a4275db1b4aa5abf25449, counter=4}, lastWriteDate=Fri Nov 07 13:22:55 CST 2025, lastUpdateTimeNanos=596406148239900}
+2025-11-07 13:22:55 - Discovered replica set primary ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 with max election id 7fffffff000000000000022b and max set version 255
+2025-11-07 13:22:55 - Eureka HTTP Client uses RestTemplate.
+2025-11-07 13:22:55 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-07 13:22:56 - Setting initial instance status as: STARTING
+2025-11-07 13:22:56 - Initializing Eureka in region us-east-1
+2025-11-07 13:22:56 - Resolving eureka endpoints via configuration
+2025-11-07 13:22:56 - Disable delta property : false
+2025-11-07 13:22:56 - Single vip registry refresh property : null
+2025-11-07 13:22:56 - Force full registry fetch : false
+2025-11-07 13:22:56 - Application is null : false
+2025-11-07 13:22:56 - Registered Applications size is zero : true
+2025-11-07 13:22:56 - Application version is -1: true
+2025-11-07 13:22:56 - Getting all instance registry info from the eureka server
+2025-11-07 13:22:56 - The response status is 200
+2025-11-07 13:22:56 - Starting heartbeat executor: renew interval is: 30
+2025-11-07 13:22:56 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-07 13:22:56 - Discovery Client initialized at timestamp 1762543376275 with initial instances count: 0
+2025-11-07 13:22:56 - Registering application CUSTOMER-MICROSERVICE with eureka with status UP
+2025-11-07 13:22:56 - Saw local status change event StatusChangeEvent [timestamp=1762543376280, current=UP, previous=STARTING]
+2025-11-07 13:22:56 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:22:56 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-07 13:22:56 - Updating port to 8080
+2025-11-07 13:22:56 - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-07 13:22:56 - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-07 13:22:56 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:23:26 - Disable delta property : false
+2025-11-07 13:23:26 - Single vip registry refresh property : null
+2025-11-07 13:23:26 - Force full registry fetch : false
+2025-11-07 13:23:26 - Application is null : false
+2025-11-07 13:23:26 - Registered Applications size is zero : true
+2025-11-07 13:23:26 - Application version is -1: false
+2025-11-07 13:23:26 - Getting all instance registry info from the eureka server
+2025-11-07 13:23:26 - The response status is 200
+2025-11-07 13:26:23 - Unregistering application CUSTOMER-MICROSERVICE with eureka with status DOWN
+2025-11-07 13:26:23 - Saw local status change event StatusChangeEvent [timestamp=1762543583194, current=DOWN, previous=UP]
+2025-11-07 13:26:23 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:26:23 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-07 13:26:23 - Graceful shutdown complete
+2025-11-07 13:26:23 - Shutting down DiscoveryClient ...
+2025-11-07 13:26:23 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:26:23 - Unregistering ...
+2025-11-07 13:26:23 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - deregister  status: 200
+2025-11-07 13:26:23 - Completed shut down of DiscoveryClient
+2025-11-07 13:26:28 - Fetching config from server at : http://localhost:8888
+2025-11-07 13:26:28 - Located environment: name=customer-microservice, profiles=[default], label=null, version=null, state=null
+2025-11-07 13:26:29 - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-11-07 13:26:29 - Finished Spring Data repository scanning in 134 ms. Found 1 MongoDB repository interface.
+2025-11-07 13:26:30 - BeanFactory id=ca15e5f9-8da9-3825-8fac-e7235961fae4
+2025-11-07 13:26:30 - Tomcat initialized with port 8080 (http)
+2025-11-07 13:26:30 - Starting service [Tomcat]
+2025-11-07 13:26:30 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-07 13:26:30 - Initializing Spring embedded WebApplicationContext
+2025-11-07 13:26:30 - Root WebApplicationContext: initialization completed in 2295 ms
+2025-11-07 13:26:31 - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.1+8-LTS-27"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='customer', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@52b32b70, com.mongodb.Jep395RecordCodecProvider@18c820d2, com.mongodb.KotlinCodecProvider@3d3930fe]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.gstcffm.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-6swb58-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-11-07 13:26:31 - Adding discovered server ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:26:31 - Adding discovered server ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:26:31 - Adding discovered server ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 to client view of cluster
+2025-11-07 13:26:32 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=501546500, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000022b, setVersion=255, topologyVersion=TopologyVersion{processId=690a45906712b525b3c02b85, counter=6}, lastWriteDate=Fri Nov 07 13:26:32 CST 2025, lastUpdateTimeNanos=596623022529800}
+2025-11-07 13:26:32 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=497009800, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az6'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a48069c893d85d73b6645, counter=3}, lastWriteDate=Fri Nov 07 13:26:32 CST 2025, lastUpdateTimeNanos=596623017998300}
+2025-11-07 13:26:32 - Monitor thread successfully connected to server with description ServerDescription{address=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=497009600, minRoundTripTimeNanos=0, setName='atlas-6swb58-shard-0', canonicalAddress=ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, hosts=[ac-yx2magj-shard-00-01.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-00.gstcffm.mongodb.net:27017, ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017], passives=[], arbiters=[], primary='ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az4'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=255, topologyVersion=TopologyVersion{processId=690a4275db1b4aa5abf25449, counter=4}, lastWriteDate=Fri Nov 07 13:26:32 CST 2025, lastUpdateTimeNanos=596623017998300}
+2025-11-07 13:26:32 - Discovered replica set primary ac-yx2magj-shard-00-02.gstcffm.mongodb.net:27017 with max election id 7fffffff000000000000022b and max set version 255
+2025-11-07 13:26:33 - Eureka HTTP Client uses RestTemplate.
+2025-11-07 13:26:33 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-07 13:26:33 - Setting initial instance status as: STARTING
+2025-11-07 13:26:33 - Initializing Eureka in region us-east-1
+2025-11-07 13:26:33 - Resolving eureka endpoints via configuration
+2025-11-07 13:26:33 - Disable delta property : false
+2025-11-07 13:26:33 - Single vip registry refresh property : null
+2025-11-07 13:26:33 - Force full registry fetch : false
+2025-11-07 13:26:33 - Application is null : false
+2025-11-07 13:26:33 - Registered Applications size is zero : true
+2025-11-07 13:26:33 - Application version is -1: true
+2025-11-07 13:26:33 - Getting all instance registry info from the eureka server
+2025-11-07 13:26:33 - The response status is 200
+2025-11-07 13:26:33 - Starting heartbeat executor: renew interval is: 30
+2025-11-07 13:26:33 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-07 13:26:33 - Discovery Client initialized at timestamp 1762543593519 with initial instances count: 0
+2025-11-07 13:26:33 - Registering application CUSTOMER-MICROSERVICE with eureka with status UP
+2025-11-07 13:26:33 - Saw local status change event StatusChangeEvent [timestamp=1762543593526, current=UP, previous=STARTING]
+2025-11-07 13:26:33 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:26:33 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-07 13:26:33 - Updating port to 8080
+2025-11-07 13:26:33 - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-07 13:26:33 - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-07 13:26:33 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:27:03 - Disable delta property : false
+2025-11-07 13:27:03 - Single vip registry refresh property : null
+2025-11-07 13:27:03 - Force full registry fetch : false
+2025-11-07 13:27:03 - Application is null : false
+2025-11-07 13:27:03 - Registered Applications size is zero : true
+2025-11-07 13:27:03 - Application version is -1: false
+2025-11-07 13:27:03 - Getting all instance registry info from the eureka server
+2025-11-07 13:27:03 - The response status is 200
+2025-11-07 13:28:03 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 19 more
+
+2025-11-07 13:28:03 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-11-07 13:28:03 - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:28:03 - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:28:03 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 20 more
+
+2025-11-07 13:28:03 - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/CUSTOMER-MICROSERVICE/22HW059186:customer-microservice": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:28:03 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2025-11-07 13:28:03 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 23 more
+
+2025-11-07 13:28:03 - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-11-07 13:28:03 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2025-11-07 13:28:19 - Unregistering application CUSTOMER-MICROSERVICE with eureka with status DOWN
+2025-11-07 13:28:19 - Saw local status change event StatusChangeEvent [timestamp=1762543699267, current=DOWN, previous=UP]
+2025-11-07 13:28:19 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice: registering service...
+2025-11-07 13:28:19 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-07 13:28:19 - Graceful shutdown complete
+2025-11-07 13:28:19 - Shutting down DiscoveryClient ...
+2025-11-07 13:28:19 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - registration status: 204
+2025-11-07 13:28:19 - Unregistering ...
+2025-11-07 13:28:19 - DiscoveryClient_CUSTOMER-MICROSERVICE/22HW059186:customer-microservice - deregister  status: 200
+2025-11-07 13:28:19 - Completed shut down of DiscoveryClient
